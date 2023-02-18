@@ -1,6 +1,6 @@
 .button-theme {
     border-radius: 60px;
-    padding: 11px 40px;
+    padding: 11px 45px;
     text-align: center;
     display: inline-block;
     vertical-align: middle;
@@ -31,9 +31,67 @@
     left: 0;
 }
 
+.swiper-actions .swiper-actions_inner {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 60px;
+}
+
+.swiper-actions .swiper-actions_inner .swiper-actions_prev,
+.swiper-actions .swiper-actions_inner .swiper-actions_next {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid rgba(var(--bs-white-rgb), .25);
+    background-color: transparent;
+    transition: var(--transition-default);
+    color: var(--bs-white);
+    font-size: 18px;
+}
+
+.swiper-actions .swiper-actions_inner .swiper-actions_prev:hover,
+.swiper-actions .swiper-actions_inner .swiper-actions_next:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--bs-white);
+}
+
+.swiper-actions .swiper-actions_inner .swiper-actions-pagination {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: unset;
+}
+
+.swiper-actions .swiper-actions_inner .swiper-actions-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(var(--bs-white-rgb), .25);
+    opacity: 1;
+}
+
+.swiper-actions .swiper-actions_inner .swiper-actions-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--bs-white);
+}
+
+.section-hero .swiper-actions {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
 .section-hero .hero-item {
     height: 83.5vh;
     padding-top: 90px;
+    padding-bottom: 120px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -48,8 +106,9 @@
     left: 0;
     right: 0;
     bottom: 0;
+    width: 100%;
     background: linear-gradient(0deg, rgba(40, 3, 29, 0.65), rgba(40, 3, 29, 0.65));
-    opacity: .1;
+    opacity: .9;
 }
 
 .section-hero .hero-item .hero-content {
