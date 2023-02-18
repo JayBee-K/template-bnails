@@ -4,14 +4,11 @@
     --size-theme: 14px;
     --bs-gray-1000: #000000;
 
-    --price-color: #d0021c;
-    --primary-color: #0867AD;
-    --primary-hover: #0b3375;
-    --primary-rgb: 8, 103, 173;
-
-    --secondary-color: #ED3439;
-    --secondary-hover: #c62a2e;
-    --secondary-rgb: 237, 52, 57;
+    --primary-color: #CA1391;
+    --primary-hover: #FF22BA;
+    --primary-black: #861462;
+    --primary-dark: #B11280;
+    --primary-rgb: 202, 19, 1454;
 }
 
 body {
