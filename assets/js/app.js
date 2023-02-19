@@ -33,7 +33,7 @@
 				speed: 400,
 				spaceBetween: 20,
 				centeredSlides: true,
-				slidesPerView: 2,
+				slidesPerView: 2.35,
 				preloadImages: false,
 				effect: 'slide',
 				allowTouchMove: false,

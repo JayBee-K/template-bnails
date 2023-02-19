@@ -286,7 +286,7 @@
 .section-feedback {
     padding-top: 448px;
     padding-bottom: 100px;
-    background: linear-gradient(180deg, rgba(71, 9, 52, 0.3) 0%, rgba(87, 20, 66, 0.8) 100%), url('../images/feedback/background.jpg'), #000000;
+    background: linear-gradient(180deg, rgba(71, 9, 52, 0.3) 0%, rgba(87, 20, 66, 0.8) 100%), url('../images/feedback/background.jpg') center center/cover, no-repeat, #000000;
 }
 
 .section-feedback .section-heading {
@@ -301,6 +301,107 @@
     color: var(--bs-white);
 }
 
-.feedback-card {
+.feedback-card .card-header {
+    border-radius: 20px !important;
+    overflow: hidden;
+    position: relative;
+    transition: var(--transition-default);
+}
 
+.feedback-card .card-header .card-play {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid var(--bs-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-default);
+    overflow: hidden;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.feedback-card .card-header .card-play svg {
+    stroke: var(--bs-white);
+    transition: var(--transition-default);
+    width: 24px;
+    height: 24px;
+}
+
+.feedback-card .card-header .card-play:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.feedback-card .card-body {
+    text-align: center;
+    color: var(--bs-white);
+    padding-top: 30px;
+    transition: var(--transition-default);
+}
+
+.feedback-card .card-body .card-description {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.feedback-card .card-body .card-title {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+    color: var(--primary-hover);
+}
+
+.feedback-card .card-body .card-text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.section-feedback .swiper-actions {
+    margin-top: 30px;
+}
+
+.section-feedback .swiper-actions .swiper-actions_inner {
+    justify-content: center;
+}
+
+.section-feedback .swiper-slide .feedback-card .card-header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: var(--transition-default);
+}
+
+.section-feedback .swiper-slide .feedback-card .card-header .card-play,
+.section-feedback .swiper-slide .feedback-card .card-body{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.section-feedback .swiper-slide.swiper-slide-active .feedback-card .card-header:after {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.section-feedback .swiper-slide.swiper-slide-active .feedback-card .card-header .card-play,
+.section-feedback .swiper-slide.swiper-slide-active .feedback-card .card-body {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
