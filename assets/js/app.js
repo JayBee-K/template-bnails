@@ -5,7 +5,7 @@
 	const handleSliderHero = function () {
 		if ($('#slider-hero').length) {
 			new Swiper('#slider-hero .swiper', {
-				speed: 800,
+				speed: 400,
 				slidesPerView: 1,
 				preloadImages: false,
 				effect: 'fade',
@@ -27,8 +27,36 @@
 		}
 	}
 
+	const handleSliderFeedback = function () {
+		if ($('#slider-feedback').length) {
+			new Swiper('#slider-feedback .swiper', {
+				speed: 400,
+				spaceBetween: 20,
+				centeredSlides: true,
+				slidesPerView: 2,
+				preloadImages: false,
+				effect: 'slide',
+				allowTouchMove: false,
+				loop: true,
+				autoplay: {
+					delay: 8000,
+					disableOnInteraction: false,
+				},
+				pagination: {
+					el: "#slider-feedback .swiper-actions-pagination",
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '#slider-feedback .swiper-actions_next',
+					prevEl: '#slider-feedback .swiper-actions_prev',
+				},
+			});
+		}
+	}
+
 	$(function () {
 		handleSliderHero();
+		handleSliderFeedback();
 
 		$(window).resize(() => {
 			windowWidth = $(window).width();
