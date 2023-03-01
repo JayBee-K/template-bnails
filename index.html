@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
 	<title>Salon Bnails</title>
 	<meta name="description" content="Salon Bnails">
@@ -18,7 +18,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		  rel="stylesheet">
+	      rel="stylesheet">
 
 	<link rel="icon" href="./assets/images/favicon.png">
 	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
@@ -40,6 +40,11 @@
 				</a>
 			</div>
 			<div class="header-navigation">
+				<div class="header-navigation_button d-block d-lg-none">
+					<a href="javascript:;" class="header-navigation_close" id="header-navigation_close">
+						<img src="./assets/images/icon-times.svg" alt="">
+					</a>
+				</div>
 				<ul class="header-navigation_list list-unstyled mb-0">
 					<li class="navigation-item">
 						<a href="" class="navigation-item_link navigation-item_link--active">
@@ -52,9 +57,26 @@
 						</a>
 					</li>
 				</ul>
+				<div class="header-navigation_contact d-flex d-lg-none">
+					<a href="" class="header-navigation_contact--item">
+						<img src="./assets/images/icon-phone.svg" height="18px" width="18px" class="img-fluid">
+						844 218 5859
+					</a>
+					<a href="" class="header-navigation_contact--item">
+						<img src="./assets/images/icon-envelope.svg" height="18px" width="18px"
+						     class="img-fluid">
+						Info@bnails.com
+					</a>
+				</div>
+			</div>
+			<div class="header-hamburger d-block d-lg-none">
+				<div class="hamburger" id="call-navigation">
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="header-overlay" id="header-overlay"></div>
 </div>
 
 <div id="main" class="main">
@@ -63,7 +85,7 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="hero-item position-relative background-cover overflow-hidden"
-						 style="background-image: url('./assets/images/hero/slider-1.jpg')">
+					     style="background-image: url('./assets/images/hero/slider-1.jpg')">
 						<div class="container position-relative zi-2">
 							<div class="col-lg-6">
 								<div class="hero-content">
@@ -91,7 +113,7 @@
 				</div>
 				<div class="swiper-slide">
 					<div class="hero-item position-relative background-cover overflow-hidden"
-						 style="background-image: url('./assets/images/hero/slider-2.jpg')">
+					     style="background-image: url('./assets/images/hero/slider-2.jpg')">
 						<div class="container position-relative zi-2">
 							<div class="col-lg-6">
 								<div class="hero-content">
@@ -105,7 +127,7 @@
 										công nghệ
 									</div>
 									<div class="hero-button">
-										<a href="./ung-tuyen.html" class="button-theme button-gradient">
+										<a href="./ung-tuyen.html" class="button-theme button-gradient_main">
 											<span class="position-relative zi-2">Ứng tuyển ngay</span>
 										</a>
 									</div>
@@ -116,7 +138,7 @@
 				</div>
 				<div class="swiper-slide">
 					<div class="hero-item position-relative background-cover overflow-hidden"
-						 style="background-image: url('./assets/images/hero/slider-3.jpg')">
+					     style="background-image: url('./assets/images/hero/slider-3.jpg')">
 						<div class="container position-relative zi-2">
 							<div class="col-lg-6">
 								<div class="hero-content">
@@ -132,7 +154,7 @@
 										bạn cho nên bạn chỉ cần tới đúng giờ salon mở cửa
 									</div>
 									<div class="hero-button">
-										<a href="./ung-tuyen.html" class="button-theme button-gradient">
+										<a href="./ung-tuyen.html" class="button-theme button-gradient_main">
 											<span class="position-relative zi-2">Ứng tuyển ngay</span>
 										</a>
 									</div>
@@ -314,9 +336,9 @@
 							</div>
 							<div class="card-play">
 								<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
-									 xmlns="http://www.w3.org/2000/svg">
+								     xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.0834961 20.4708V3.52912C0.0834961 2.31523 0.637661 1.39162 1.74599 0.758286C2.85433 0.124953 3.93628 0.17773 4.99183 0.916619L18.1335 9.30828C19.1363 9.94162 19.6377 10.8388 19.6377 12C19.6377 13.1611 19.1363 14.0583 18.1335 14.6916L4.99183 23.0833C3.93628 23.8222 2.85433 23.875 1.74599 23.2416C0.637661 22.6083 0.0834961 21.6847 0.0834961 20.4708Z"
-										  fill="white"/>
+									      fill="white"/>
 								</svg>
 								<a data-fancybox href="https://www.youtube.com/watch?v=ElxaHom_JY0"
 								   class="stretched-link"></a>
@@ -343,9 +365,9 @@
 							</div>
 							<div class="card-play">
 								<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
-									 xmlns="http://www.w3.org/2000/svg">
+								     xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.0834961 20.4708V3.52912C0.0834961 2.31523 0.637661 1.39162 1.74599 0.758286C2.85433 0.124953 3.93628 0.17773 4.99183 0.916619L18.1335 9.30828C19.1363 9.94162 19.6377 10.8388 19.6377 12C19.6377 13.1611 19.1363 14.0583 18.1335 14.6916L4.99183 23.0833C3.93628 23.8222 2.85433 23.875 1.74599 23.2416C0.637661 22.6083 0.0834961 21.6847 0.0834961 20.4708Z"
-										  fill="white"/>
+									      fill="white"/>
 								</svg>
 								<a data-fancybox href="https://www.youtube.com/watch?v=pGas5wO1aG8"
 								   class="stretched-link"></a>
@@ -372,9 +394,9 @@
 							</div>
 							<div class="card-play">
 								<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
-									 xmlns="http://www.w3.org/2000/svg">
+								     xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.0834961 20.4708V3.52912C0.0834961 2.31523 0.637661 1.39162 1.74599 0.758286C2.85433 0.124953 3.93628 0.17773 4.99183 0.916619L18.1335 9.30828C19.1363 9.94162 19.6377 10.8388 19.6377 12C19.6377 13.1611 19.1363 14.0583 18.1335 14.6916L4.99183 23.0833C3.93628 23.8222 2.85433 23.875 1.74599 23.2416C0.637661 22.6083 0.0834961 21.6847 0.0834961 20.4708Z"
-										  fill="white"/>
+									      fill="white"/>
 								</svg>
 								<a data-fancybox href="https://www.youtube.com/watch?v=pGas5wO1aG8"
 								   class="stretched-link"></a>
@@ -401,9 +423,9 @@
 							</div>
 							<div class="card-play">
 								<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
-									 xmlns="http://www.w3.org/2000/svg">
+								     xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.0834961 20.4708V3.52912C0.0834961 2.31523 0.637661 1.39162 1.74599 0.758286C2.85433 0.124953 3.93628 0.17773 4.99183 0.916619L18.1335 9.30828C19.1363 9.94162 19.6377 10.8388 19.6377 12C19.6377 13.1611 19.1363 14.0583 18.1335 14.6916L4.99183 23.0833C3.93628 23.8222 2.85433 23.875 1.74599 23.2416C0.637661 22.6083 0.0834961 21.6847 0.0834961 20.4708Z"
-										  fill="white"/>
+									      fill="white"/>
 								</svg>
 								<a data-fancybox href="https://www.youtube.com/watch?v=ElxaHom_JY0"
 								   class="stretched-link"></a>
@@ -430,9 +452,9 @@
 							</div>
 							<div class="card-play">
 								<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
-									 xmlns="http://www.w3.org/2000/svg">
+								     xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.0834961 20.4708V3.52912C0.0834961 2.31523 0.637661 1.39162 1.74599 0.758286C2.85433 0.124953 3.93628 0.17773 4.99183 0.916619L18.1335 9.30828C19.1363 9.94162 19.6377 10.8388 19.6377 12C19.6377 13.1611 19.1363 14.0583 18.1335 14.6916L4.99183 23.0833C3.93628 23.8222 2.85433 23.875 1.74599 23.2416C0.637661 22.6083 0.0834961 21.6847 0.0834961 20.4708Z"
-										  fill="white"/>
+									      fill="white"/>
 								</svg>
 								<a data-fancybox href="https://www.youtube.com/watch?v=pGas5wO1aG8"
 								   class="stretched-link"></a>
@@ -459,9 +481,9 @@
 							</div>
 							<div class="card-play">
 								<svg width="20" height="24" viewBox="0 0 20 24" fill="none"
-									 xmlns="http://www.w3.org/2000/svg">
+								     xmlns="http://www.w3.org/2000/svg">
 									<path d="M0.0834961 20.4708V3.52912C0.0834961 2.31523 0.637661 1.39162 1.74599 0.758286C2.85433 0.124953 3.93628 0.17773 4.99183 0.916619L18.1335 9.30828C19.1363 9.94162 19.6377 10.8388 19.6377 12C19.6377 13.1611 19.1363 14.0583 18.1335 14.6916L4.99183 23.0833C3.93628 23.8222 2.85433 23.875 1.74599 23.2416C0.637661 22.6083 0.0834961 21.6847 0.0834961 20.4708Z"
-										  fill="white"/>
+									      fill="white"/>
 								</svg>
 								<a data-fancybox href="https://www.youtube.com/watch?v=pGas5wO1aG8"
 								   class="stretched-link"></a>
@@ -517,8 +539,8 @@
 					</div>
 				</div>
 				<div class="col-lg-6">
-					<div class="h-100 d-flex align-items-end justify-content-end">
-						<div class="swiper-actions">
+					<div class="h-100 d-none d-lg-flex align-items-end justify-content-lg-end justify-content-center">
+						<div class="swiper-actions" id="swiper-actions_pc">
 							<div class="swiper-actions_inner">
 								<div class="swiper-actions_prev">
 									<i class="far fa-arrow-left"></i>
@@ -663,6 +685,19 @@
 					</div>
 				</div>
 			</div>
+			<div class="h-100 d-flex d-lg-none align-items-end justify-content-lg-end justify-content-center">
+				<div class="swiper-actions" id="swiper-actions_mobile">
+					<div class="swiper-actions_inner">
+						<div class="swiper-actions_prev">
+							<i class="far fa-arrow-left"></i>
+						</div>
+						<div class="swiper-actions-pagination"></div>
+						<div class="swiper-actions_next">
+							<i class="far fa-arrow-right"></i>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="section-introduction position-relative zi-2">
@@ -687,7 +722,7 @@
 				<div class="introduction-content_inner">
 					<div class="introduction-content_img">
 						<img src="assets/images/icon-location.svg" width="43" height="53"
-							 alt="Về chúng tôi - Bnails" class="img-fluid">
+						     alt="Về chúng tôi - Bnails" class="img-fluid">
 					</div>
 					<div class="introduction-content_text">
 						Với qui mô ngày càng phát triển, 2018 Bnails có location thứ 2 tại Amarillo - Texas , cuối
@@ -735,7 +770,7 @@
 							</a>
 							<a href="" class="footer-button_item">
 								<img src="./assets/images/icon-envelope.svg" height="18px" width="18px"
-									 class="img-fluid">
+								     class="img-fluid">
 								Info@bnails.com
 							</a>
 						</div>
@@ -761,7 +796,7 @@
 
 <script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
-		src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
 <script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
 <script type="text/javascript" src="./assets/js/app.js"></script>

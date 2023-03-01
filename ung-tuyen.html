@@ -36,25 +36,47 @@
 		<div class="header-main">
 			<div class="header-logo">
 				<a href="" class="d-inline-block align-items-center">
-					<img src="./assets/images/logo.png" alt="">
+					<img src="./assets/images/logo-main.png" alt="">
 				</a>
 			</div>
 			<div class="header-navigation">
+				<div class="header-navigation_button d-block d-lg-none">
+					<a href="javascript:;" class="header-navigation_close" id="header-navigation_close">
+						<img src="./assets/images/icon-times.svg" alt="">
+					</a>
+				</div>
 				<ul class="header-navigation_list list-unstyled mb-0">
 					<li class="navigation-item">
-						<a href="" class="navigation-item_link">
+						<a href="" class="navigation-item_link navigation-item_link--active">
 							Trang chủ
 						</a>
 					</li>
 					<li class="navigation-item">
-						<a href="./lien-he.html" class="navigation-item_link navigation-item_link--active">
+						<a href="./lien-he.html" class="navigation-item_link">
 							Liên hệ
 						</a>
 					</li>
 				</ul>
+				<div class="header-navigation_contact d-flex d-lg-none">
+					<a href="" class="header-navigation_contact--item">
+						<img src="./assets/images/icon-phone.svg" height="18px" width="18px" class="img-fluid">
+						844 218 5859
+					</a>
+					<a href="" class="header-navigation_contact--item">
+						<img src="./assets/images/icon-envelope.svg" height="18px" width="18px"
+						     class="img-fluid">
+						Info@bnails.com
+					</a>
+				</div>
+			</div>
+			<div class="header-hamburger d-block d-lg-none">
+				<div class="hamburger" id="call-navigation">
+					<span></span>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="header-overlay" id="header-overlay"></div>
 </div>
 
 <div id="main" class="main">
