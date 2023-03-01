@@ -39,6 +39,7 @@
     position: relative;
     overflow: hidden;
     white-space: nowrap;
+    border: 0;
 }
 
 .button-theme:hover {
@@ -843,7 +844,7 @@
     box-shadow: 0 13px 45px rgba(35, 5, 28, 0.12);
 }
 
-.recruitment-form .recruitment-item .recruitment-item_label {
+.theme-form .form-item .form-item_label {
     font-size: 14px;
     font-weight: 500;
     color: var(--primary-color);
@@ -851,11 +852,11 @@
     margin-bottom: 8px;
 }
 
-.recruitment-form .recruitment-item .recruitment-item_field {
+.theme-form .form-item .form-item_field {
     position: relative;
 }
 
-.recruitment-form .recruitment-item .recruitment-item_input {
+.theme-form .form-item .form-item_input {
     height: 50px;
     padding: 12px 0;
     border: 0;
@@ -870,18 +871,206 @@
     position: relative;
 }
 
-.recruitment-form .recruitment-item .recruitment-item_select {
+.theme-form .form-item textarea.form-item_input {
+    height: auto;
+    resize: none;
+}
+
+.theme-form .form-item .form-item_select {
     cursor: pointer;
 }
 
-.recruitment-form .recruitment-item .recruitment-item_select .recruitment-item_select--value {
+.theme-form .form-item .form-item_select .form-item_select--value {
     color: #ADADB5;
     padding-right: 50px;
 }
 
-.recruitment-form .recruitment-item .recruitment-item_select .recruitment-item_select--icon {
+.theme-form .form-item .form-item_select .form-item_select--value.is-value {
+    color: #000000;
+}
+
+.theme-form .form-item .form-item_select .form-item_select--icon {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 0;
+}
+
+.theme-form .form-item .form-item_list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 13px 45px rgba(38, 5, 28, 0.12);
+    display: flex;
+    flex-direction: column;
+    background: var(--bs-white);
+    z-index: 20;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: var(--transition-default);
+}
+
+.theme-form .form-item.show .form-item_list {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: scaleY(1);
+}
+
+.theme-form .form-item .form-item_list .form-item_list--option {
+    display: flex;
+    padding: 20px;
+    color: #000000;
+    transition: var(--transition-default);
+}
+
+.theme-form .form-item .form-item_list .form-item_list--option:hover,
+.theme-form .form-item .form-item_list .form-item_list--option.active {
+    background: #FBECF6;
+}
+
+.theme-form .form-item .form-star {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.theme-form .form-item .form-star .form-star_label {
+    font-size: 16px;
+    font-weight: 400;
+    color: #2D2C40;
+}
+
+.theme-form .form-item .form-star .form-star_numbers {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+    position: relative;
+    gap: 12px;
+}
+
+.theme-form .form-item .form-star .form-star_numbers input {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.theme-form .form-item .form-star .form-star_numbers label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #f0dae9;
+    transition: var(--transition-default);
+}
+
+.theme-form .form-item .form-star .form-star_numbers label:hover,
+.theme-form .form-item .form-star .form-star_numbers label:hover ~ label,
+.theme-form .form-item .form-star .form-star_numbers input:checked ~ label,
+.theme-form .form-item .form-star .form-star_numbers input:checked + label:hover,
+.theme-form .form-item .form-star .form-star_numbers input:checked + label:hover ~ label,
+.theme-form .form-item .form-star .form-star_numbers input:checked ~ label:hover,
+.theme-form .form-item .form-star .form-star_numbers input:checked ~ label:hover ~ label,
+.theme-form .form-item .form-star .form-star_numbers label:hover ~ input:checked ~ label {
+    color: #FFC122;
+}
+
+.theme-form .form-item .form-star .form-star_numbers label:hover .fas,
+.theme-form .form-item .form-star .form-star_numbers label:hover ~ label .fas,
+.theme-form .form-item .form-star .form-star_numbers input:checked ~ label .fas,
+.theme-form .form-item .form-star .form-star_numbers input:checked + label:hover .fas,
+.theme-form .form-item .form-star .form-star_numbers input:checked + label:hover ~ label .fas,
+.theme-form .form-item .form-star .form-star_numbers input:checked ~ label:hover .fas,
+.theme-form .form-item .form-star .form-star_numbers input:checked ~ label:hover ~ label .fas,
+.theme-form .form-item .form-star .form-star_numbers label:hover ~ input:checked ~ label .fas {
+    font-weight: 900;
+}
+
+.section-review {
+    padding: 64px 0;
+    background: #F5F5F5;
+}
+
+.section-review .review-inner {
+    padding: 64px 300px;
+    border-radius: 20px;
+    box-shadow: 0 13px 45px rgba(35, 5, 28, 0.12);
+}
+
+.section-review .review-inner .review-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(92.94deg, #861462 -3.38%, #CB1A94 108.45%);
+    padding: 26px 45px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 60px;
+}
+
+.section-review .review-inner .review-header:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: url('../images/review/background.png') center center / cover no-repeat
+}
+
+.section-review .review-inner .review-header .review-header_item {
+    position: relative;
+    z-index: 2;
+    color: var(--bs-white);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: calc(50% - 15px);
+    padding: 0 15px;
+    gap: 5px;
+}
+
+.section-review .review-inner .review-header .review-header_item .review-header_item--text {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.section-review .review-inner .review-header .review-header_item .review-header_item--title {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.section-review .review-inner .review-header .review-header_item + .review-header_item:before {
+    position: absolute;
+    border-left: 1px solid rgba(255, 255, 255, 0.31);
+    height: 100%;
+    left: 0;
+    display: block;
+    content: "";
+    width: 1px;
+    top: 50%;
+    transform: translateY(-50%);
 }
